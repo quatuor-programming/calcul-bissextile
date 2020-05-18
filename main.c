@@ -3,7 +3,7 @@
 
 int main () {
   printf("Calcul des années bissextiles \n ------- \n code par trio-programming\n\n");
-  int annee = 0, reste = 0;
+  int annee = 0, reste = 0, verify = 0;
   printf("Quelle annee voluez-vous verifier ?\n");
   scanf("%d", &annee);
   
@@ -13,10 +13,10 @@ int main () {
     reste = annee % 100;
     if(reste == 0) {
       reste = annee % 400;
-      if (reste == 0) {printf("Cette annee est bien bissextile\n");}
+      if (reste == 0) {printf("Cette annee est bien bissextile\n"); verify = 1;}
       else {printf("Cette année n'est pas bissextile.\n");}
     }
-    printf("Cette année est bien bissextile.\n");
+    if (verify == 0) {printf("Cette année est bien bissextile.\n");}
   }
   return 0;
 }
