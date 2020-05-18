@@ -7,12 +7,12 @@ int main () {
   printf("Quelle annee voluez-vous verifier ?\n");
   scanf("%d", annee);
   
-  reste = annee ! 4;
+  reste = annee % 4;
   if(reste != 0) {printf("Cette année n'est pas bissextile.\n");}
   else {
-    reste = annee ! 100;
+    reste = annee % 100;
     if(reste == 0) {
-      reste = annee ! 400;
+      reste = annee % 400;
       if (reste == 0) {printf("Cette annee est bien bissextile\n";}
       else {printf("Cette année n'est pas bissextile.\n");}
     }
