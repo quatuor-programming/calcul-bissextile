@@ -14,7 +14,7 @@ int main () {
     if(reste == 0) {
       reste = annee % 400;
       if (reste == 0) {printf("Cette annee est bien bissextile\n"); verify = 1;}
-      else {printf("Cette année n'est pas bissextile.\n");}
+      else {printf("Cette année n'est pas bissextile.\n"); verify = 1;}
     }
     if (verify == 0) {printf("Cette année est bien bissextile.\n");}
   }
